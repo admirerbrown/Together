@@ -2,13 +2,14 @@ import { MdMenu } from "react-icons/md";
 import { FaXTwitter, FaFacebookF, FaPinterestP } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi";
 import logo from '../assets/logo.png'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 
 const NavBar = () => {
     return (
         <div>
-            <div className="h-[6.5rem] bg-[#0f0f0f] text-white flex justify-between xl:justify-center xl:gap-[300px] 2xl:gap-[500px] items-center px-4 lg:px-5">
+            <div className="h-[6.5rem] bg-[#0f0f0f] text-white flex justify-between xl:justify-center xl:gap-[300px] 2xl:gap-[500px] items-center px-4 lg:px-8">
                 <div className="flex ">
                     <img src={logo} alt="logo" className="h-14 w-full" />
                     <div className="flex items-center flex-col text-left">
@@ -35,6 +36,9 @@ const NavBar = () => {
                 <div className="lg:hidden">
                     <Drawer></Drawer>
                 </div>
+            </div>
+            <div className="hidden lg:flex w-full">
+                <NavItems></NavItems>
             </div>
 
         </div>
@@ -65,31 +69,48 @@ const Drawer = () => {
 };
 
 const NavItems = () => {
+    const location = useLocation();
     const [activeTab, setActiveTab] = useState('home');
 
     const tabs = [
-        { id: 'home', label: 'Home' },
-        { id: 'events', label: 'events' },
-        { id: 'about-us', label: 'about us' },
-        { id: 'our-causes', label: 'our causes' },
-        { id: 'contacts', label: 'Contacts' },
+        { id: 'home', label: 'Home', _to:'/' },
+        { id: 'events', label: 'events', _to:'/events'  },
+        { id: 'about-us', label: 'about us', _to:'/about-us'  },
+        { id: 'our-causes', label: 'our causes', _to:'/our-causes'  },
+        { id: 'contacts', label: 'Contacts', _to:'/contacts'  },
 
     ];
 
+useEffect(() => {
+    if (location.pathname === '/') {
+      setActiveTab('home');
+    } else if (location.pathname === '/events') {
+      setActiveTab('events');
+    } else if (location.pathname === '/about-us') {
+      setActiveTab('about-us');
+    }else if (location.pathname === '/our-causes') {
+      setActiveTab('our-causes');
+    }else if (location.pathname === '/contacts') {
+      setActiveTab('contacts');
+    }
+  }, [location]);
+
+
     return (
-        <ul className="uppercase">
+        <ul className="uppercase lg:flex lg:border-b lg:h-16 lg:w-full lg:items-center lg:justify-start lg:gap-14 lg:pl-[2rem] xl:pl-[7rem] 2xl:pl-[21rem]">
             {tabs.map((tab) => (
-                <li
+                <NavLink
+                    to={tab._to}
                     key={tab.id}
-                    className={`relative h-14 border-b pl-4 border-opacity-10 hover:bg-opacity-10 hover:bg-black border-black flex justify-center text-white font-bold ${activeTab === tab.id ? 'group-hover:block' : ''
+                    className={`relative h-14 border-b pl-4 border-opacity-10 hover:bg-opacity-10 hover:bg-[#333] border-black flex justify-center text-white font-bold lg:text-[#333] lg:text-sm lg:items-center lg:justify-center lg:border-none lg:hover:text-[#84c54e] lg:p-0 lg:h-0 ${activeTab === tab.id ? 'group-hover:block lg:text-[#84c54e] active' : ''
                         }`}
-                        onClick={()=>setActiveTab(tab.id)}
+                    onClick={() => setActiveTab(tab.id)}
                 >
                     {tab.label}
                     {activeTab === tab.id && (
                         <div className="absolute inset-0 bg-black opacity-20 rounded-none"></div>
                     )}
-                </li>
+                </NavLink>
             ))}
         </ul>
 
@@ -98,3 +119,4 @@ const NavItems = () => {
 }
 
 export default NavBar;
+
