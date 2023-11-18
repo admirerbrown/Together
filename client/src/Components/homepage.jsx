@@ -7,32 +7,6 @@ const HomePage = () => {
     <div>
       <Carousel></Carousel>
     </div>
-    // <motion.div className="text-right mr-24">
-    //     <motion.h1
-    //         initial={{ opacity: 0, y: 50 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 0.5, duration: 1 }}
-    //         className="text-2xl"
-    //     >
-    //         community foundation
-    //     </motion.h1>
-    //     <motion.h2
-    //         initial={{ opacity: 0, y: 50 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 1.2, duration: 1 }}
-    //         className="text-9xl font-bold"
-    //     >
-    //         give a little.
-    //     </motion.h2>
-    //     <motion.h2
-    //         initial={{ opacity: 0, y: 50 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ delay: 1.8, duration: 1 }}
-    //         className="text-8xl font-bold"
-    //     >
-    //         change a lot
-    //     </motion.h2>
-    // </motion.div>
   );
 }
 
@@ -60,7 +34,7 @@ const Carousel = () => {
 
     },
     {
-      category: 'volunteer foundation',
+      category: 'volunteer',
       image: 'https://img.freepik.com/free-photo/successful-businessmen-seal-deal-with-firm-handshake-generated-by-ai_188544-40065.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=aiss',
       text: 'Why work for a Charity',
 
@@ -68,17 +42,19 @@ const Carousel = () => {
     },
   ];
   const [activeIndex, setActiveIndex] = useState(0);
+  const [refreshKey, setRefreshKey] = useState(0);
 
   const changeActiveSlide = (newIndex) => {
     setActiveIndex(newIndex);
+    setRefreshKey((prevKey) => prevKey + 1);
+
   };
 
   useEffect(() => {
-    // Set up auto-changing active slide interval (adjust the duration as needed)
     const intervalId = setInterval(() => {
       const nextIndex = (activeIndex + 1) % data.length;
       changeActiveSlide(nextIndex);
-    }, 5000);
+    }, 7000);
 
     // Clear the interval when the component is unmounted or when data changes
     return () => clearInterval(intervalId);
@@ -91,18 +67,14 @@ const Carousel = () => {
       {data.map((info, index) => (
         <div key={index} id={`slide${index + 1}`} className={`flex items-center carousel-item relative w-full ${index === activeIndex ? 'block' : 'hidden'}`}>
           <img src={info.image} className="w-full h-[773px]" alt={`Slide ${index + 1}`} />
-          <div className="z-20 absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href={`#slide${index}`} className="btn btn-circle">❮</a>
-            <a href={`#slide${index + 2}`} className="btn btn-circle">❯</a>
-          </div>
 
-          <motion.div className="absolute flex flex-col w-full transform  pl-[325px] justify-start">
+          <motion.div className="absolute flex flex-col w-full transform  pl-[325px] justify-start" key={refreshKey}>
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1 }}
               exit={{ opacity: 0, y: 50 }}
-              className="text-2xl text-white font-bold font-Open-Sans"
+              className="text-2xl text-white font-bold font-Open-Sans capitalize"
             >
               {info.category}
             </motion.h1>
