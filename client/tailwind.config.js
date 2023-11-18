@@ -10,6 +10,7 @@ export default {
       fontFamily: {
         'Pacifico': ['Pacifico', 'cursive'],
         'Kalam': ['Kalam', 'cursive'],
+        'Open-Sans': ["Open Sans",'sans-serif'],
 
       },
     },

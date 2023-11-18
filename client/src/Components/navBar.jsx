@@ -27,8 +27,8 @@ const NavBar = () => {
 
                     </ul>
                     <div className="flex items-center ">
-                        <div className=" flex items-center justify-center font-bold btn-sm h-11 w-[120px] bg-[#84c54e] hover:bg-[#ffaa5f] mr-2.5 border-none rounded">DONATE</div>
-                        <div className="bg-[#ffe400] flex items-center justify-center font-bold btn-sm h-11 w-[200px] text-[#0f0f0f] hover:text-white hover:bg-[#ffaa5f] mr-2 border-none rounded">BECOME A VOLUNTEER</div>
+                        <div className=" flex items-center justify-center font-bold btn-sm h-11 w-[120px] bg-[#84c54e] hover:bg-[#ff6900] mr-2.5 border-none rounded">DONATE</div>
+                        <div className="bg-[#ffe400] flex items-center justify-center font-bold btn-sm h-11 w-[200px] text-[#0f0f0f] hover:text-white hover:bg-[#ff6900] mr-2 border-none rounded">BECOME A VOLUNTEER</div>
                     </div>
 
                 </div>
@@ -73,36 +73,36 @@ const NavItems = () => {
     const [activeTab, setActiveTab] = useState('home');
 
     const tabs = [
-        { id: 'home', label: 'Home', _to:'/' },
-        { id: 'events', label: 'events', _to:'/events'  },
-        { id: 'about-us', label: 'about us', _to:'/about-us'  },
-        { id: 'our-causes', label: 'our causes', _to:'/our-causes'  },
-        { id: 'contacts', label: 'Contacts', _to:'/contacts'  },
+        { id: 'home', label: 'Home', url_path: '/' },
+        { id: 'events', label: 'events', url_path: '/events' },
+        { id: 'about-us', label: 'about us', url_path: '/about-us' },
+        { id: 'our-causes', label: 'our causes', url_path: '/our-causes' },
+        { id: 'contacts', label: 'Contacts', url_path: '/contacts' },
 
     ];
 
-useEffect(() => {
-    if (location.pathname === '/') {
-      setActiveTab('home');
-    } else if (location.pathname === '/events') {
-      setActiveTab('events');
-    } else if (location.pathname === '/about-us') {
-      setActiveTab('about-us');
-    }else if (location.pathname === '/our-causes') {
-      setActiveTab('our-causes');
-    }else if (location.pathname === '/contacts') {
-      setActiveTab('contacts');
-    }
-  }, [location]);
+    useEffect(() => {
+        if (location.pathname === '/') {
+            setActiveTab('home');
+        } else if (location.pathname === '/events') {
+            setActiveTab('events');
+        } else if (location.pathname === '/about-us') {
+            setActiveTab('about-us');
+        } else if (location.pathname === '/our-causes') {
+            setActiveTab('our-causes');
+        } else if (location.pathname === '/contacts') {
+            setActiveTab('contacts');
+        }
+    }, [location]);
 
 
     return (
         <ul className="uppercase lg:flex lg:border-b lg:h-16 lg:w-full lg:items-center lg:justify-start lg:gap-14 lg:pl-[2rem] xl:pl-[7rem] 2xl:pl-[21rem]">
             {tabs.map((tab) => (
                 <NavLink
-                    to={tab._to}
+                    to={tab.url_path}
                     key={tab.id}
-                    className={`relative h-14 border-b pl-4 border-opacity-10 hover:bg-opacity-10 hover:bg-[#333] border-black flex justify-center text-white font-bold lg:text-[#333] lg:text-sm lg:items-center lg:justify-center lg:border-none lg:hover:text-[#84c54e] lg:p-0 lg:h-0 ${activeTab === tab.id ? 'group-hover:block lg:text-[#84c54e] active' : ''
+                    className={`relative h-14 border-b pl-4 border-opacity-10 hover:bg-opacity-10 hover:bg-[#333] border-black flex items-center text-white font-bold lg:text-[#333] lg:text-sm lg:items-center lg:justify-center lg:border-none lg:hover:text-[#84c54e] lg:p-0 lg:h-0 ${activeTab === tab.id ? 'group-hover:block lg:text-[#84c54e] active' : ''
                         }`}
                     onClick={() => setActiveTab(tab.id)}
                 >
