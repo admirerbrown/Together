@@ -10,7 +10,7 @@ const NavBar = () => {
     return (
         <div>
             <div className="h-[6.5rem] bg-[#0f0f0f] text-white flex justify-between xl:justify-center xl:gap-[300px] 2xl:gap-[500px] items-center px-4 lg:px-8">
-                <div className="flex ">
+                <div className="flex">
                     <img src={logo} alt="logo" className="h-14 w-full" />
                     <div className="flex items-center flex-col text-left">
                         <h1 className="text-3xl font-Kalam font-bold">Together</h1>
@@ -47,7 +47,7 @@ const NavBar = () => {
 
 const Drawer = () => {
     return (
-        <div className="drawer ">
+        <div className="z-40 drawer ">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
                 <label htmlFor="my-drawer" className="btn-sm drawer-button">
