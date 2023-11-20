@@ -53,15 +53,26 @@ const Drawer = () => {
                 <label htmlFor="my-drawer" className="btn-sm drawer-button">
                     <MdMenu className="my-drawer drawer-button text-[26px] text-white text-4xl hover:text-[#84c54e]"></MdMenu>
                 </label>
+                
             </div>
-            <div className="drawer-side mt-[6.5rem] ">
-                <label
+            
+            <div className="drawer-side mt-[6.5rem] md:mt-0 ">
+                {/* <label
                     htmlFor="my-drawer"
                     aria-label="close sidebar"
                     className=""
-                ></label>
-                <div className="menu p-0 w-full min-h-full text-base-content bg-[#84c54e]">
+                ></label> */}
+                <div className="menu p-0 w-full min-h-full md:w-[38%] text-base-content bg-[#84c54e]">
+                    <label
+                    htmlFor="my-drawer"
+                    aria-label="close sidebar"
+                    className=""
+                >
                     <NavItems></NavItems>
+
+                </label>
+                  
+                    {/* <NavItems></NavItems> */}
                 </div>
             </div>
         </div>
@@ -120,3 +131,4 @@ const NavItems = () => {
 
 export default NavBar;
 
+//TODO:FIX THE NAVBAR: WHEN THE DRAWER OPENS THE PAGE BEHIND SHOULDNT BE SCROLLABLE
