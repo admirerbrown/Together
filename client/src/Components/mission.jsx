@@ -23,7 +23,7 @@ const Missions = () => {
 
 
     return (
-        <div className="bg-[#f6f5f2] flex flex-col items-center gap-8 font-Open-Sans">
+        <div className="bg-[#f6f5f2] flex flex-col items-center gap-8 font-Open-Sans h-full">
             <div className="flex flex-col items-center mt-16">
                 <h2 className='text-2xl font-extrabold uppercase mb-3 md:text-3xl xl:text-5xl'>our mission</h2>
                 <p className='px-10 text-center md:text-[20px] font-normal lg:text-[22px] xl:text-[24px] xl:mt-4'>Protecting the rights and wellbeing of EVERY child</p>

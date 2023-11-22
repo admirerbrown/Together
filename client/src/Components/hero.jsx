@@ -6,9 +6,9 @@ import { carouselData } from '../db/carouselData';
 
 const HeroSection = () => {
   return (
-    <div>
-      <Carousel data={ carouselData }></Carousel>
-    </div>
+    <>
+      <Carousel data={carouselData}></Carousel>
+    </>
   );
 }
 
@@ -36,10 +36,13 @@ const Carousel = ({ data }) => {
 
 
   return (
-    <div className="carousel w-full h-[600px] md:h-[500px] lg:h-[565px] xl:h-[640px] 2xl:h-[773px]">
+    <div className=" carousel w-full h-[600px] md:h-[500px] lg:h-[565px] xl:h-[640px] 2xl:h-[773px]">
       {data.map((info, index) => (
-        <div key={index} id={`slide${index + 1}`} className={`flex items-center carousel-item relative w-full ${index === activeIndex ? 'block' : 'hidden'}`}>
-          <img src={info.image} className="w-full h-[600px] 2xl:h-[773px] xl:h-[640px] md:h-[500px] lg:h-[565px]" alt={`Slide ${index + 1}`} />
+        <div key={index} id={`slide${index + 1}`} className={`flex object-cover items-center carousel-item relative w-full h-full ${index === activeIndex ? 'block' : 'hidden'}`}>
+          <div className=" object-cover w-full h-full">
+            <img src={info.image} className='w-full h-full' alt={`Slide ${index + 1}`} />
+
+          </div>
 
           <motion.div className="absolute  pl-3 flex flex-col w-full transform md:pl-[100px] 2xl:pl-[325px] items-center md:items-start 2xl:justify-start" key={refreshKey}>
             <motion.h1
