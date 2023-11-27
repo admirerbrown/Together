@@ -2,6 +2,8 @@ import HeroSection from "./hero"
 import Missions from "./mission"
 import HomeCauses from "./causesSumary"
 import StatsComp from './statsSection'
+import BarStats from './bars';
+import Summary from "./bars";
 
 const HomePage =()=>{
   return (
@@ -10,6 +12,9 @@ const HomePage =()=>{
       <Missions></Missions>
       <HomeCauses></HomeCauses>
       <StatsComp></StatsComp>
+      {/* <BarStats></BarStats> */}
+      <Summary></Summary>
+
     </div>
   )
 }
