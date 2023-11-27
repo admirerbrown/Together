@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { RiArrowRightCircleFill } from "react-icons/ri";
+import CountUpAnimation from "./counterAnimation";
 
 
 const StatsComp = () => {
@@ -48,7 +48,7 @@ const StatsComp = () => {
 								{data.map((item, index) => (
 									<div key={index + 1} className=''>
 										<div className='w-full flex flex-col text-white gap-3'>
-											<h1 className='text-[2.8rem] text-[#ffe400] lg:text-[4rem] font-bold flex'><CountUpAnimation>{item.figure}</CountUpAnimation></h1>
+											<h1 className='text-[2.8rem] text-[#ffe400] lg:text-[4rem] font-bold flex'><CountUpAnimation duration={2000}>{item.figure}</CountUpAnimation></h1>
 											<h2 className='font-bold md:text-[18px] xl:text-[22px] 2xl:text-[24px]'>{item.title}</h2>
 											<p className='text-[13px] md:text-[15px] xl:text-[16px] leading-5 text-zinc-100 w-[270px] md:w-[180px] lg:w-[260px] 2xl:w-[350px] 2xl:leading-7'>{item.text}</p>
 											<div className={`mb-10 md:mb-0 mt-7 md:mt-20 flex items-center justify-center pl-12 md:pl-5 font-bold btn-sm w-[280px] lg:w-[290px] md:w-[220px] 2xl:w-[350px] h-[55px] md:h-[60px] lg:h-[70px] xl:w-[310px] xl:h-[85px] text-white border-none rounded-[0.2rem] text-[16px] xl:text-[24px] ${item.id === 1 ? 'bg-[#e41c26] hover:bg-[#ff6900]' : item.id === 2 ? 'bg-[#ff6900] hover:bg-[#84c54e]' : 'bg-[#84c54e] hover:bg-[#ff6900]'}`}>
@@ -68,29 +68,9 @@ const StatsComp = () => {
 	);
 }
 
-const easeOutQuad = t => t * (2 - t);
-const frameDuration = 1000 / 60;
 
-const CountUpAnimation = ({ children, duration = 2000 }) => {
-	const countTo = parseInt(children, 10);
-	const [count, setCount] = useState(0);
-
-	useEffect(() => {
-		let frame = 0;
-		const totalFrames = Math.round(duration / frameDuration);
-		const counter = setInterval(() => {
-			frame++;
-			const progress = easeOutQuad(frame / totalFrames);
-			setCount(countTo * progress);
-
-			if (frame === totalFrames) {
-				clearInterval(counter);
-			}
-		}, frameDuration);
-
-	}, [countTo, duration]);
-
-	return Math.floor(count);
-};
 
 export default StatsComp;
+
+
+//TODO:CLEAN CODE AND ENSURE THE STATS ANIMATION RUNS ONLY WHEN THE COMPONENT IS REACHED ON THE FIRST TIME
