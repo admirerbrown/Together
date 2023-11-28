@@ -68,14 +68,14 @@ const BarStats = () => {
 
 const Summary = () => {
     return (
-        <div className=' flex gap-12 w-full flex-col md:flex-row items-center mt-10 pb-20 '>
-            <div className='flex flex-col font-Open-Sans md:w-[420px] gap-5 pt-5 mt-5 w-full pl-[3.8rem]'>
+        <div className=' flex gap-12 w-full flex-col md:flex-row items-center mt-10 lg:mt-0 pb-20 md:px-16 lg:px-10'>
+            <div className='flex flex-col font-Open-Sans xl:w-[420px] gap-5 pt-5 mt-5 lg:pt-0 lg:mt-0 w-full pl-[3.8rem] md:pl-0'>
                 <div>
-                    <h1 className='text-2xl lg:text-5xl font-Open-Sans font-extrabold md:leading-[3.5rem] w-[200px] mb-4'>WHERE THE MONEY GOES</h1>
-                    <p className='text-[15px] md:text-[22px] w-[250px]'>Current operation and program spending breakdown</p>
+                    <h1 className='text-2xl md:text-3xl lg:text-[32px] xl:text-5xl font-Open-Sans font-extrabold lg:leading-[2.5rem] xl:leading-[3.5rem] md:w-[250px] w-[200px] mb-4'>WHERE THE MONEY GOES</h1>
+                    <p className='text-[15px] md:text-[17px] lg:text-[18px] xl:text-[22px] w-[250px] lg:w-[280px]'>Current operation and program spending breakdown</p>
                 </div>
 
-                <ul className='flex flex-col gap-3 text-sm text-[#ff6900] font-bold list-disc md:text-lg pl-5'>
+                <ul className='flex flex-col gap-3 text-sm md:text-[17px] lg:text-[16px] lg:mt-5 text-[#ff6900] font-bold list-disc xl:text-lg pl-5'>
                     <li className=''>Education and Prevention</li>
                     <li className=''>Trauma Care for Children</li>
                     <li className=''>Fundraising</li>
