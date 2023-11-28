@@ -1,5 +1,7 @@
 import { RiArrowRightCircleFill } from "react-icons/ri";
 import CountUpAnimation from "./counterAnimation";
+import { useState, useEffect } from 'react';
+
 
 
 const StatsComp = () => {
@@ -32,15 +34,34 @@ const StatsComp = () => {
 
 	]
 
+	const [renderComponent, setRenderComponent] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const componentToShow = document.getElementById('showStats');
+            const componentPosition = componentToShow.getBoundingClientRect().top;
+
+            if (componentPosition < window.innerHeight) {
+                setRenderComponent(true);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 	return (
 
-		<div className="bg-white w-full h-[1350px] md:h-[800px] lg:h-[750px] xl:h-[900px] 2xl:h-[900px]">
+		<div id="showStats" className="bg-white w-full h-[1350px] md:h-[800px] lg:h-[750px] xl:h-[900px] 2xl:h-[900px]">
 			<div className={`flex items-start relative w-full h-full xl:items-center`}>
 				<div className=" object-cover w-full h-full">
 					<img src={image} className='w-full h-full' />
 				</div>
 
-				<div className="absolute flex flex-col items-center w-full font-Open-Sans pt-[9rem] gap-16 md:pl-5 lg:pl-0 xl:pl-0 xl:pt-0 ">
+				{renderComponent && <div className="absolute flex flex-col items-center w-full font-Open-Sans pt-[9rem] gap-16 md:pl-5 lg:pl-0 xl:pl-0 xl:pt-0 ">
 					<p className='text-white uppercase font-[800] text-[60px] leading-[4.5rem] w-[300px] md:text-start md:pl-16 lg:pl-8 xl:pl-[8rem] 2xl:pl-[25rem] md:w-full'>How You can help</p>
 					<div className='xl:px-0'>
 						<div className='flex flex-col md:flex-row md:gap-8 w-full md:w-[85%] lg:w-full items-center px-7 md:px-0 '>
@@ -58,11 +79,9 @@ const StatsComp = () => {
 									</div>
 								))}
 							</div>
-
 						</div>
 					</div>
-
-				</div>
+				</div>}
 			</div>
 		</div >
 	);
@@ -73,4 +92,4 @@ const StatsComp = () => {
 export default StatsComp;
 
 
-//TODO:CLEAN CODE AND ENSURE THE STATS ANIMATION RUNS ONLY WHEN THE COMPONENT IS REACHED ON THE FIRST TIME
+//TODO:CLEAN CODE
