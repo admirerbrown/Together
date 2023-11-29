@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 
 const StatsComp = () => {
-	const image = 'https://img.freepik.com/free-photo/back-view-crowd-fans-watching-live-concert-performance-3_1562-629.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=ais'
+	const image = 'https://charity-is-hope.themerex.net/wp-content/uploads/2016/09/bg-4.jpg?id=423'
 
 	const data = [
 		{
@@ -36,22 +36,22 @@ const StatsComp = () => {
 
 	const [renderComponent, setRenderComponent] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const componentToShow = document.getElementById('showStats');
-            const componentPosition = componentToShow.getBoundingClientRect().top;
+	useEffect(() => {
+		const handleScroll = () => {
+			const componentToShow = document.getElementById('showStats');
+			const componentPosition = componentToShow.getBoundingClientRect().top;
 
-            if (componentPosition < window.innerHeight) {
-                setRenderComponent(true);
-            }
-        };
+			if (componentPosition < window.innerHeight) {
+				setRenderComponent(true);
+			}
+		};
 
-        window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
 	return (
 
