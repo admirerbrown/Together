@@ -4,6 +4,7 @@ import HomeCauses from "./causesSumary"
 import StatsComp from './statsSection'
 import Summary from "./bars";
 import AdComponent from './adComponent'
+import HomeBlog from "./Homeblog";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <StatsComp />
       <AdComponent />
       <Summary />
+      <HomeBlog />
     </div>
   );
 };
