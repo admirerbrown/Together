@@ -58,7 +58,6 @@ const Footer = () => {
         <p className="text-[#8a8a8a] text-xs lg:text-sm">Built by <span className="text-[#84c54e]">Submarine-Tech</span> © 2023 All Rights Reserved.</p>
       </div>
     </div>
-
   );
 };
 
