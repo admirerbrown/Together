@@ -7,13 +7,17 @@ import partner2 from '../assets/partner-2.png'
 import partner3 from '../assets/partner-3.png'
 import partner4 from '../assets/partner-4.png'
 import partner5 from '../assets/partner-5.png'
+import logo2 from '../assets/Logo2.png'
 
 const Footer = () => {
   return (
     <div>
       <div className="bg-[#333] flex flex-col md:flex-row py-24 md:pl-6 lg:pl-8 xl:pl-0 md:items-center md:justify-center gap-14">
         <div className="flex flex-col gap-6 md:w-[55%] 2xl:w-[28%] lg:w-[50%] xl:w-[38%] px-12 lg:px-0 text-[12.7px] lg:text-[13px]  xl:text-[14.5px] 2xl:text-[15px] md:text-xs 2xl:mr-5">
-          <img src="" alt="logo" />
+          <div className="w-[200px]">
+            <img src={logo2} className="w-full h-full" alt="logo" />
+          </div>
+          
           <p className="text-[#8a8a8a] leading-[1.5rem] pr-12 md:pr-0 lg:pr-0">
             Every member of together strongly believes that we can help a lot by
             donating just a little. We are committed to doing what is necessary,
@@ -58,7 +62,6 @@ const Footer = () => {
         <p className="text-[#8a8a8a] text-xs lg:text-sm">Built by <span className="text-[#84c54e]">Submarine-Tech</span> © 2023 All Rights Reserved.</p>
       </div>
     </div>
-
   );
 };
 
@@ -112,4 +115,4 @@ const PartnerSlider = () => {
 export default Footer;
 
 
-//TODO:CLEAN CODE AND ADD LOGO TO THE FOOTER...
+//TODO:CLEAN CODE 

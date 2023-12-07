@@ -11,6 +11,7 @@ export default {
         'Pacifico': ['Pacifico', 'cursive'],
         'Kalam': ['Kalam', 'cursive'],
         'Open-Sans': ["Open Sans",'sans-serif'],
+        'Cherry-Bomb-One': ["Cherry Bomb One",'cursive'],
       },
       backgroundImage: {
       "bg_image": "url('https://img.freepik.com/free-photo/back-view-crowd-fans-watching-live-concert-performance-3_1562-629.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=ais')",

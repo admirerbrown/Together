@@ -6,7 +6,7 @@ import { FaComment, FaHeart, FaLink } from "react-icons/fa6";
 
 const HomeBlog = () => {
     return (
-        <div className="bg-[#ffffff] flex flex-col gap-10 md:gap-0 lg:gap-10 items-center justify-center pt-16 xl:pt-24 2xl:gap-0 font-Open-Sans pb-10">
+        <div className="bg-[#ffffff] flex flex-col gap-10 md:gap-0 lg:gap-10 items-center justify-center pt-16 xl:pt-24 2xl:gap-0 font-Open-Sans pb-28">
             <h1 className="uppercase text-[22px] md:text-[2rem] xl:text-[3rem] xl:mb-3 2xl:mb-0 font-extrabold ">
                 our blog
             </h1>

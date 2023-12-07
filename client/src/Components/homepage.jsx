@@ -5,6 +5,7 @@ import StatsComp from './statsSection'
 import Summary from "./bars";
 import AdComponent from './adComponent'
 import HomeBlog from "./Homeblog";
+import DonateSection from './donate';
 
 const HomePage = () => {
   return (
@@ -16,6 +17,8 @@ const HomePage = () => {
       <AdComponent />
       <Summary />
       <HomeBlog />
+      <DonateSection />
+
     </div>
   );
 };
