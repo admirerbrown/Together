@@ -13,7 +13,7 @@ const NavBar = () => {
                 <div className="flex">
                     <img src={logo} alt="logo" className="h-14 w-full" />
                     <div className="flex items-center flex-col text-left">
-                        <h1 className="text-3xl font-Kalam font-bold">Together</h1>
+                        <h1 className="text-3xl font-Cherry-Bomb-One tracking-widest font-bold">Together</h1>
                         <p className="flex text-sm text-start w-full ml-3 font-Pacifico text-[#84c54e]">Shared. Cares</p>
                     </div>
                 </div>
