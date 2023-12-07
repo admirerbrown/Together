@@ -1,7 +1,7 @@
 import { MdMenu } from "react-icons/md";
 import { FaXTwitter, FaFacebookF, FaPinterestP } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi";
-import logo from '../assets/logo.png'
+import logo from '../assets/mainlogo.png'
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
