@@ -1,5 +1,5 @@
-import blog1 from "../assets/blog1.jpg";
-import blog2 from "../assets/blog2.jpg";
+import blog1 from "../../assets/blog1.jpg";
+import blog2 from "../../assets/blog2.jpg";
 
 import { MdRemoveRedEye } from "react-icons/md";
 import { FaComment, FaHeart, FaLink } from "react-icons/fa6";

@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { RiArrowRightCircleFill } from "react-icons/ri";
 import { useState, useEffect } from 'react';
-import { carouselData } from '../db/carouselData';
+import { carouselData } from '../../db/carouselData';
 
 const HeroSection = () => {
   return (

@@ -115,4 +115,4 @@ const PartnerSlider = () => {
 export default Footer;
 
 
-//TODO:CLEAN CODE 
+//TODO:CLEAN CODE and move the carousel outside this component;
