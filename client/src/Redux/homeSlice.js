@@ -13,13 +13,13 @@ const getCauseData = createAsyncThunk(FETCHDATA, async () => {
     const response = await axios.request(options);
 
     const causeList = response.data;
-    console.log(causeList)
-    return causeList;
+    console.log(causeList.causes[0])
+    return causeList.causes;
 });
 
 
 //reducer
-const homePageReducer = createSlice({
+const causesReducer = createSlice({
     name: 'causeData',
     initialState: {
         data: [],
@@ -36,5 +36,5 @@ const homePageReducer = createSlice({
 });
 
 
-export default homePageReducer;
+export default causesReducer;
 export { getCauseData }
