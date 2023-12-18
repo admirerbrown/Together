@@ -3,10 +3,17 @@ import { FaXTwitter, FaFacebookF, FaPinterestP } from "react-icons/fa6";
 import { TfiYoutube } from "react-icons/tfi";
 import logo from '../assets/mainlogo.png'
 import { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 
 const NavBar = () => {
+    const navigate = useNavigate();
+
+    const handleBtnClick = ( btnId ) => {
+        btnId === 'donate' ? navigate('/our-causes') : navigate('/contacts');
+    }
+
+
     return (
         <div>
             <div className="h-[6.5rem] bg-[#0f0f0f] text-white flex justify-between xl:justify-center xl:gap-[300px] 2xl:gap-[500px] items-center px-4 lg:px-8">
@@ -27,8 +34,8 @@ const NavBar = () => {
 
                     </ul>
                     <div className="flex items-center ">
-                        <div className=" flex items-center justify-center font-bold btn-sm h-11 w-[120px] bg-[#84c54e] hover:bg-[#ff6900] mr-2.5 border-none rounded">DONATE</div>
-                        <div className="bg-[#ffe400] flex items-center justify-center font-bold btn-sm h-11 w-[200px] text-[#0f0f0f] hover:text-white hover:bg-[#ff6900] mr-2 border-none rounded">BECOME A VOLUNTEER</div>
+                        <div className=" flex items-center justify-center font-bold btn-sm h-11 w-[120px] bg-[#84c54e] hover:bg-[#ff6900] mr-2.5 border-none rounded" onClick={() => handleBtnClick('donate')} >DONATE</div>
+                        <div className="bg-[#ffe400] flex items-center justify-center font-bold btn-sm h-11 w-[200px] text-[#0f0f0f] hover:text-white hover:bg-[#ff6900] mr-2 border-none rounded" onClick={() => handleBtnClick('contact')}>BECOME A VOLUNTEER</div>
                     </div>
 
                 </div>
@@ -53,9 +60,9 @@ const Drawer = () => {
                 <label htmlFor="my-drawer" className="btn-sm drawer-button">
                     <MdMenu className="my-drawer drawer-button text-[26px] text-white text-4xl hover:text-[#84c54e]"></MdMenu>
                 </label>
-                
+
             </div>
-            
+
             <div className="drawer-side mt-[6.5rem] md:mt-0 ">
                 {/* <label
                     htmlFor="my-drawer"
@@ -64,14 +71,14 @@ const Drawer = () => {
                 ></label> */}
                 <div className="menu p-0 w-full min-h-full md:w-[38%] text-base-content bg-[#84c54e]">
                     <label
-                    htmlFor="my-drawer"
-                    aria-label="close sidebar"
-                    className=""
-                >
-                    <NavItems></NavItems>
+                        htmlFor="my-drawer"
+                        aria-label="close sidebar"
+                        className=""
+                    >
+                        <NavItems></NavItems>
 
-                </label>
-                  
+                    </label>
+
                     {/* <NavItems></NavItems> */}
                 </div>
             </div>
@@ -131,4 +138,4 @@ const NavItems = () => {
 
 export default NavBar;
 
-//TODO:FIX THE NAVBAR: WHEN THE DRAWER OPENS THE PAGE BEHIND SHOULDNT BE SCROLLABLE
+//TODO:FIX THE NAVBAR: WHEN THE DRAWER OPENS THE PAGE BEHIND SHOULDNT BE SCROLLABLE on mobile

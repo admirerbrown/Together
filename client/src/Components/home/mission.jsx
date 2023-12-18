@@ -1,6 +1,6 @@
-import heart from '../assets/mission_1.png'
-import globe from '../assets/mission_2.png'
-import palm from '../assets/mission_3.png'
+import heart from '../../assets/mission_1.png'
+import globe from '../../assets/mission_2.png'
+import palm from '../../assets/mission_3.png'
 import { RiArrowRightCircleFill } from "react-icons/ri";
 
 

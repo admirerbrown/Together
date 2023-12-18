@@ -1,4 +1,4 @@
-import flower from '../assets/flower.png';
+import flower from '../../assets/flower.png';
 
 
 const DonateSection = () => {
