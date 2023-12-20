@@ -25,9 +25,9 @@ const RenderData = ({ data }) => {
             </p>
 
             <div>
-              <p className="text-[14px] font-bold mb-2">
-                <span className="text-[#84c54e] font-bold">{item.amount_raised}</span>{" "}
-                of {item.target} raised
+              <p className="text-[14px] xl:text-[16px] font-bold mb-2">
+                <span className="text-[#84c54e] font-bold">${item.amount_raised}</span>{" "}
+                of ${item.target} raised
               </p>
               <div className="w-[240px] md:w-[310px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px] h-5 bg-[#eee] rounded-full mb-5 md:mb-8">
                 <div

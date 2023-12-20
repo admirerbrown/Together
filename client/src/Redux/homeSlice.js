@@ -13,7 +13,6 @@ const getCauseData = createAsyncThunk(FETCHDATA, async () => {
     const response = await axios.request(options);
 
     const causeList = response.data;
-    console.log(causeList.causes[0])
     return causeList.causes;
 });
 
