@@ -1,6 +1,14 @@
 /* eslint-disable react/prop-types */
 
+import { useNavigate } from "react-router-dom";
+
 const RenderData = ({ data }) => {
+  const navigate = useNavigate();
+
+  const handleBtnClick = ()=>{
+    navigate('/donate');
+  }
+
   return (
     <div className="flex flex-col flex-wrap gap-12 md:px-10 md:pl-[72px] md:flex-row lg:justify-start md:gap-12 lg:gap-16 lg:px-20 xl:px-0 xl:pl-0 xl:ml-0 2xl:gap-20 md:mt-10 xl:justify-center 2xl:w-[80%] ">
       {data.map((item, index) => (
@@ -35,7 +43,7 @@ const RenderData = ({ data }) => {
                   className="h-full text-center text-xs text-white bg-[#ff6900] rounded-full"
                 ></div>
               </div>
-              <div className="mb-0 flex items-center justify-center font-bold btn-sm h-[44px] w-[100px] bg-[#ffe400] hover:bg-[#84c54e] hover:text-white mr-2.5 border-none rounded">
+              <div onClick={() => handleBtnClick()} className="mb-0 cursor-pointer flex items-center justify-center font-bold btn-sm h-[44px] w-[100px] bg-[#ffe400] hover:bg-[#84c54e] hover:text-white mr-2.5 border-none rounded">
                 Donate
               </div>
             </div>

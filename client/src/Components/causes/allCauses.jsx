@@ -13,7 +13,6 @@ const Causes = () => {
             <div className='bg-[#ffffff] flex flex-col font-Open-Sans items-center justify-center pb-20'>
                 <RenderData data={causeData}></RenderData>
             </div>
-
         </div>
     )
 }
