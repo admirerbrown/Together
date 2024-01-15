@@ -16,7 +16,7 @@ const Donate = () => {
         <img src="" alt="" />
       </div>
 
-      <div className="flex flex-col md:flex-row text-[#8a8a8a]">
+      <div className="flex flex-col md:flex-row text-[#8a8a8a] md:px-8">
         <div>
           <CauseCard item={item}></CauseCard>
 
@@ -25,11 +25,11 @@ const Donate = () => {
               My Donations
             </p>
 
-            <p className="mb-3 pr-[2rem] md:pr-0 text-[12.5px] md:text-[14px] xl:text-[16px] leading-[1.4rem] xl:leading-[1.6rem] md:px-0 text-left text-zinc-500">
+            <p className="mb-3 pr-[2rem] md:w-[70%] text-[12.5px] md:text-[14px] xl:text-[16px] leading-[1.4rem] xl:leading-[1.6rem] md:px-0 text-left text-zinc-500">
               Here you can view your donations made to support our projects.
             </p>
 
-            <p className="mb-3 pr-[5rem] md:pr-0 text-[12.5px] md:text-[14px] xl:text-[16px] leading-[1.4rem] xl:leading-[1.6rem] md:px-0 text-left text-zinc-500">
+            <p className="mb-3 pr-[5rem]  md:w-[70%] md:pr-0 text-[12.5px] md:text-[14px] xl:text-[16px] leading-[1.4rem] xl:leading-[1.6rem] md:px-0 text-left text-zinc-500">
               Please verify your email to access your donation history.
             </p>
             <div>
@@ -46,7 +46,7 @@ const Donate = () => {
                   id="donationEmail"
                   name="donationEmail"
                   placeholder="Email Address"
-                  className=" input mt-2 mb-4 placeholder:text-xs focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent md:placeholder:text-sm xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[35px] xl:h-[40px] w-[280px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
+                  className=" input mt-2 mb-4 placeholder:text-xs focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent md:placeholder:text-sm xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[35px] xl:h-[40px] w-[280px] md:w-[260px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
                 />
 
                 <button
@@ -72,8 +72,8 @@ const Donate = () => {
 const CauseCard = ({ item }) => {
   return (
     <>
-      <div className="flex flex-col  lg:w-[400px] xl:w-[320px] 2xl:w-[340px] items-center mt-10">
-        <div className="w-[285px] object-cover md:w-[320px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px]">
+      <div className="flex flex-col md:mx-10  lg:w-[400px] xl:w-[320px] 2xl:w-[340px] items-center md:items-start mt-10">
+        <div className="w-[285px] object-cover md:w-[260px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px]">
           <img
             src={item.image}
             className="w-full h-full rounded"
@@ -81,8 +81,8 @@ const CauseCard = ({ item }) => {
           />
         </div>
 
-        <div className=" justify-center items-center md:px-10 lg:px-0 xl:pl-2 2xl:pl-0 flex flex-col gap-2 mt-6">
-          <p className="pl-11 md:pl-0 text-[22px] md:text-[22px] xl:text-[25px] font-bold text-[#333] text-start w-full md:px-0">
+        <div className=" justify-center items-center w-full lg:px-0 xl:pl-2 2xl:pl-0 flex flex-col gap-2 mt-6">
+          <p className="pl-11 md:pl-0 text-[22px] md:text-[28px] xl:text-[25px] font-bold text-[#333] text-start w-full md:px-0">
             Our Goal
           </p>
           <p className="px-11 mb-1.5 pr-[5rem] md:pr-0 text-[12.5px] md:text-[14px] xl:text-[16px] leading-[1.4rem] xl:leading-[1.6rem] md:px-0 text-left text-zinc-500">
@@ -90,14 +90,14 @@ const CauseCard = ({ item }) => {
             projects related to ecology and human rights.
           </p>
 
-          <div>
-            <p className="text-[13px] xl:text-[16px] font-bold mb-2">
+          <div className="md:w-full">
+            <p className="text-[13px] xl:text-[16px] text-[#333] font-bold mb-2">
               <span className="text-[#84c54e] font-bold">
                 ${item.amount_raised}
               </span>{" "}
               of ${item.target} raised
             </p>
-            <div className="w-[282px] md:w-[310px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px] h-5 bg-[#eee] rounded-full mb-5 md:mb-8">
+            <div className="w-[282px] md:w-[260px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px] h-5 bg-[#eee] rounded-full mb-5 md:mb-8">
               <div
                 style={{ width: `${item.progress}%` }}
                 className="h-full text-center text-xs text-white bg-[#ff6900] rounded-full"

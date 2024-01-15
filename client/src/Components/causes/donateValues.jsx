@@ -62,7 +62,7 @@ const DonateForm = ({ item }) => {
     const handleChange = () => { };
 
     return (
-        <div className="font-Open-Sans mt-12">
+        <div className="font-Open-Sans mt-12 md:w-full ">
             <h1 className="ml-10 text-[40px] leading-[2.7rem] pr-5 font-semibold text-[#84c54e]">{item.title}</h1>
             <p className="px-10 text-[12.5px] pt-8">{item.description}</p>
             <div className="flex flex-col px-10 mb-10">

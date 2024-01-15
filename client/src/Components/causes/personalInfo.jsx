@@ -18,7 +18,7 @@ const InfoForm = ({ userAmount }) => {
 
                 <hr className="h-2 w-full"/>
 
-                <div className=" flex flex-col mt-5">
+                <div className=" flex flex-col mt-5 md:flex-row md:gap-3">
                     <div className="flex flex-col">
                         <label
                             htmlFor="FirstName"
@@ -31,7 +31,7 @@ const InfoForm = ({ userAmount }) => {
                             id="FirstName"
                             name="FirstName"
                             placeholder="First Name"
-                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent md:placeholder:text-lg  xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
+                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
                         />
                     </div>
 
@@ -47,12 +47,12 @@ const InfoForm = ({ userAmount }) => {
                             id="LastName"
                             name="LastName"
                             placeholder="Last Name"
-                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent md:placeholder:text-lg  xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
+                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
                         />
                     </div>
                 </div>
 
-                <div className="flex flex-col">
+                <div className="flex flex-col md:w-full">
                     <label
                         htmlFor="email_address"
                         className="text-[#8a8a8a] text-[15px] font-semibold"
@@ -64,7 +64,7 @@ const InfoForm = ({ userAmount }) => {
                         id="email_address"
                         name="Email Address"
                         placeholder="Email Address"
-                        className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent md:placeholder:text-lg  xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
+                        className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
                     />
                 </div>
 
