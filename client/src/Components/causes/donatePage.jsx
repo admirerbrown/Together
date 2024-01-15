@@ -16,7 +16,7 @@ const Donate = () => {
         <img src="" alt="" />
       </div>
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row text-[#8a8a8a]">
         <div>
           <CauseCard item={item}></CauseCard>
 
@@ -110,74 +110,7 @@ const CauseCard = ({ item }) => {
   );
 };
 
-// const DonateForm = ({ item }) => {
-//   // const [update, setUpdate] = useState("");
-//   const donationOptions = [
-//     { label: "$5.00", value: "5.00" },
-//     { label: "$10.00", value: "10.00" },
-//     { label: "$20.00", value: "20.00" },
-//     { label: "$50.00", value: "50.00" },
-//     { label: "other", value: "0.00" },
-//   ];
 
-//   const [selectedAmount, setSelectedAmount] = useState(donationOptions[0].value);
-
-//   const inputRef = useRef(null);
-// //  const checkbox = document.getElementById('checkOther');
-
-//   const handleToggle = (amount) => {
-//     setSelectedAmount(amount);
-//   };
-
-//  const handleChange=()=>{
-
-//  };
-
-//  const handleInputFocus=()=>{
-
-//  }
-
-//   return (
-//     <div>
-//       <h1>{item.title}</h1>
-//       <p>{item.description}</p>
-//       <div>
-//         <p>Donation Form</p>
-//         <div className="flex items-center">
-//           <input
-//             type="text"
-//             id="isfocused"
-//             onChange={handleChange}
-//             onFocus={handleInputFocus}
-
-//             className="border h-9 w-[120px]"
-//             value={selectedAmount}
-//             ref={inputRef}
-//           />
-//         </div>
-
-//         {donationOptions.map((option, index) => (
-//           <div key={index} className="flex items-center gap-2">
-//             <div
-//               className={`rounded-full p-[2px] w-3.5 border h-3.5 flex items-center ${
-//                 selectedAmount === option.value ? "border-blue-500" : "border-[#333]"
-//               }`}
-//             >
-//               <input
-//                 type="checkbox"
-//                 checked={selectedAmount === option.value}
-//                 onChange={() => handleToggle(option.value)}
-//                 id="checkOther"
-//                 className="appearance-none w-full h-full  border-[#333] checked:bg-blue-500 checked:border-transparent rounded-full focus:outline-none"
-//               />
-//             </div>
-//             <p>{option.label}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
 
 
 
