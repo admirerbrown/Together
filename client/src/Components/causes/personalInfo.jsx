@@ -2,7 +2,7 @@
 import { FaXTwitter, FaFacebookF, FaPinterestP } from "react-icons/fa6";
 
 const InfoForm = ({ userAmount }) => {
-    const handleSubmit =()=>{
+    const handleSubmit = () => {
         console.log('call backend api');
     }
 
@@ -16,7 +16,7 @@ const InfoForm = ({ userAmount }) => {
                     Personal Info (optional)
                 </p>
 
-                <hr className="h-2 w-full"/>
+                <hr className="h-2 w-full xl:w-[95%]" />
 
                 <div className=" flex flex-col mt-5 md:flex-row md:gap-3">
                     <div className="flex flex-col">
@@ -31,7 +31,7 @@ const InfoForm = ({ userAmount }) => {
                             id="FirstName"
                             name="FirstName"
                             placeholder="First Name"
-                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
+                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent   rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[290px] 2xl:w-[420px]"
                         />
                     </div>
 
@@ -47,7 +47,7 @@ const InfoForm = ({ userAmount }) => {
                             id="LastName"
                             name="LastName"
                             placeholder="Last Name"
-                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
+                            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[290px] 2xl:w-[420px]"
                         />
                     </div>
                 </div>
@@ -64,17 +64,20 @@ const InfoForm = ({ userAmount }) => {
                         id="email_address"
                         name="Email Address"
                         placeholder="Email Address"
-                        className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full xl:w-[320px] 2xl:w-[420px]"
+                        className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full xl:w-[95%] 2xl:w-[420px]"
                     />
                 </div>
 
-                <div className="flex flex-col w-full items-end pr-3">
-                    <p className="text-[18px] italic font-Open-Sans font-semibold text-[#8a8a8a]">
-                        Donation Total:
-                    </p>
-                    <p className="text-[#8a8a8a] mt-3 mb-4 font-semibold text-[18px]">
-                        ${userAmount !== " " || "" ? `${userAmount}.00` : "0.00"}
-                    </p>
+                <div className="flex flex-col w-full items-end pr-3 xl:pr-9">
+                    <div className="flex flex-col xl:flex-row items-center gap-3">
+                        <p className="text-[18px] italic font-Open-Sans font-semibold text-[#8a8a8a]">
+                            Donation Total:
+                        </p>
+                        <p className="text-[#8a8a8a] mt-3  mb-4 font-semibold text-[18px]">
+                            ${userAmount !== " " || "" ? `${userAmount}.00` : "0.00"}
+                        </p>
+                    </div>
+
 
                     <button
                         type="Submit"

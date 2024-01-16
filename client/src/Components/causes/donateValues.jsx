@@ -65,18 +65,10 @@ const DonateForm = ({ item }) => {
       <h1 className="ml-10 text-[40px] leading-[2.7rem] pr-5 lg:ml-0 font-bold text-[#84c54e]">
         {item.title}
       </h1>
-      <p className="px-10 text-[12.5px] pt-8 lg:px-0 lg:pr-8 lg:text-[14px] leading-[1.5rem]">{item.description}</p>
-      {/* <p className="px-10 text-[12.5px] pt-8 lg:px-0 lg:pr-8 lg:text-[14px] leading-[1.5rem]">
-        The space complexity of your function is O(1). The function uses a
-        constant amount of extra space regardless of the size of the input
-        string. The only variables used are len, pointer, sum, symbol_1,
-        symbol_2, and calValue. These variables do not depend on the input size;
-        they are independent of the length of the input string. The dictionary
-        roman_symbols is also a constant-size data structure as it contains a
-        
-      </p> */}
+      <p className="px-10 text-[12.5px] pt-8 lg:px-0 lg:pr-8 lg:text-[14px] xl:text-[15.5px] xl:w-[95%] leading-[1.5rem]">{item.description}</p>
+      
       <div className="flex flex-col px-10 mb-10 lg:px-0">
-        <p className="text-[#84c54e] font-bold mb-3 mt-5">Donation Form</p>
+        <p className="text-[#84c54e] xl:text-[24px] font-bold mb-3 mt-5">Donation Form</p>
         <div className="flex items-center gap-3">
           <label htmlFor="amount" className="text-[#8a8a8a] mb-2 text-[18px]">
             $
