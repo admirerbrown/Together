@@ -16,7 +16,7 @@ const Donate = () => {
         <img src="" alt="" />
       </div>
 
-      <div className="flex flex-col md:flex-row text-[#8a8a8a] md:px-8">
+      <div className="flex flex-col md:flex-row text-[#8a8a8a] md:px-8 lg:px-0">
         <div>
           <CauseCard item={item}></CauseCard>
 
@@ -72,8 +72,8 @@ const Donate = () => {
 const CauseCard = ({ item }) => {
   return (
     <>
-      <div className="flex flex-col md:mx-10  lg:w-[400px] xl:w-[320px] 2xl:w-[340px] items-center md:items-start mt-10">
-        <div className="w-[285px] object-cover md:w-[260px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px]">
+      <div className="flex flex-col md:mx-10  xl:w-[320px] 2xl:w-[340px] items-center md:items-start mt-10">
+        <div className="w-[285px] object-cover md:w-[260px] lg:w-[300px] xl:w-[300px] 2xl:w-[340px]">
           <img
             src={item.image}
             className="w-full h-full rounded"
@@ -97,7 +97,7 @@ const CauseCard = ({ item }) => {
               </span>{" "}
               of ${item.target} raised
             </p>
-            <div className="w-[282px] md:w-[260px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px] h-5 bg-[#eee] rounded-full mb-5 md:mb-8">
+            <div className="w-[282px] md:w-[260px] lg:w-[300px] xl:w-[300px] 2xl:w-[340px] h-5 bg-[#eee] rounded-full mb-5 md:mb-8">
               <div
                 style={{ width: `${item.progress}%` }}
                 className="h-full text-center text-xs text-white bg-[#ff6900] rounded-full"

@@ -8,7 +8,7 @@ const InfoForm = ({ userAmount }) => {
 
     return (
         <div>
-            <form action="#" id="donations" className="flex flex-col px-10 mb-40">
+            <form action="#" id="donations" className="flex flex-col px-10 mb-40 lg:px-0 lg:pr-8">
                 <p
                     id="title"
                     className="text-[#8a8a8a] text-start tracking-wider italic text-[15px] font-semibold mb-2"
@@ -64,7 +64,7 @@ const InfoForm = ({ userAmount }) => {
                         id="email_address"
                         name="Email Address"
                         placeholder="Email Address"
-                        className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full lg:w-[300px] xl:w-[320px] 2xl:w-[420px]"
+                        className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent xl:placeholder:text-lg rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full xl:w-[320px] 2xl:w-[420px]"
                     />
                 </div>
 
