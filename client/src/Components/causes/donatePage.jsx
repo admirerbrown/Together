@@ -1,19 +1,32 @@
 /* eslint-disable react/prop-types */
 import { useSelector } from "react-redux";
+import { useEffect, useState } from 'react';
+import {useParams,  useNavigate} from 'react-router-dom'
 import DonateForm from "./donateValues";
 
 const Donate = () => {
   const causeData = useSelector((state) => state.cause.data);
-  const item = causeData[0];
+  const navigate = useNavigate();
+   const { id } = useParams();
+   const numericId = parseInt(id, 10);
+
+  const item = causeData.find((item) => item.cause_id === numericId);
+  console.log({item,causeData})
+
+ 
+
 
   const verifyEmail = () => {
     console.log("coming soon");
   };
 
+
+  
+
   return (
     <div>
-      <div>
-        <img src="" alt="" />
+      <div className="object-cover  mb-20 lg:mb-24">
+        <img src={item.image} alt="" className="w-full md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[700px]"/>
       </div>
 
       <div className="flex flex-col md:flex-row text-[#8a8a8a] xl:justify-center md:px-8 lg:px-0 xl:px-20 2xl:px-0 xl:gap-8">
@@ -51,7 +64,7 @@ const Donate = () => {
 
                 <button
                   type="button"
-                  onClick={verifyEmail()}
+                  onClick={verifyEmail}
                   className="mb-0 cursor-pointer flex items-center justify-center font-bold btn-sm h-[40px] w-[120px] hover:bg-[#ff6900] bg-[#84c54e] text-white mr-2.5 border-none rounded"
                 >
                   Verify Email
@@ -70,6 +83,8 @@ const Donate = () => {
 };
 
 const CauseCard = ({ item }) => {
+
+  
   return (
     <>
       <div className="flex flex-col md:mx-10 xl: 2xl:w-[350px] items-center xl:justify-center md:items-start mt-10">

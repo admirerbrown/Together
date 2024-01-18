@@ -1,12 +1,22 @@
 /* eslint-disable react/prop-types */
 
 import { useNavigate } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
+// import Donate from "../causes/donatePage";
+
 
 const RenderData = ({ data }) => {
   const navigate = useNavigate();
 
-  const handleBtnClick = ()=>{
-    navigate('/donate');
+  const handleBtnClick = (id)=>{
+    // Use template literals for dynamic path
+  const path = `/donate/cause_id/${id}`;
+
+  // Navigate to the specified path
+  navigate(path);
+
+
+
   }
 
   return (
@@ -43,7 +53,7 @@ const RenderData = ({ data }) => {
                   className="h-full text-center text-xs text-white bg-[#ff6900] rounded-full"
                 ></div>
               </div>
-              <div onClick={() => handleBtnClick()} className="mb-0 cursor-pointer flex items-center justify-center font-bold btn-sm h-[44px] w-[100px] bg-[#ffe400] hover:bg-[#84c54e] hover:text-white mr-2.5 border-none rounded">
+              <div onClick={() => handleBtnClick(item.cause_id)} className="mb-0 cursor-pointer flex items-center justify-center font-bold btn-sm h-[44px] w-[100px] bg-[#ffe400] hover:bg-[#84c54e] hover:text-white mr-2.5 border-none rounded">
                 Donate
               </div>
             </div>
