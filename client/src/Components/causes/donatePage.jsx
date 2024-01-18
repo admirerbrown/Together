@@ -16,7 +16,7 @@ const Donate = () => {
         <img src="" alt="" />
       </div>
 
-      <div className="flex flex-col md:flex-row text-[#8a8a8a] md:px-8 lg:px-0 xl:px-20 xl:gap-8">
+      <div className="flex flex-col md:flex-row text-[#8a8a8a] xl:justify-center md:px-8 lg:px-0 xl:px-20 2xl:px-0 xl:gap-8">
         <div>
           <CauseCard item={item}></CauseCard>
 
