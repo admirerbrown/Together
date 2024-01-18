@@ -34,8 +34,8 @@ const NavBar = () => {
 
                     </ul>
                     <div className="flex items-center ">
-                        <div className=" flex items-center justify-center font-bold btn-sm h-11 w-[120px] bg-[#84c54e] hover:bg-[#ff6900] mr-2.5 border-none rounded" onClick={() => handleBtnClick('donate')} >DONATE</div>
-                        <div className="bg-[#ffe400] flex items-center justify-center font-bold btn-sm h-11 w-[200px] text-[#0f0f0f] hover:text-white hover:bg-[#ff6900] mr-2 border-none rounded" onClick={() => handleBtnClick('contact')}>BECOME A VOLUNTEER</div>
+                        <div className=" cursor-pointer flex items-center justify-center font-bold btn-sm h-11 w-[120px] bg-[#84c54e] hover:bg-[#ff6900] mr-2.5 border-none rounded" onClick={() => handleBtnClick('donate')} >DONATE</div>
+                        <div className="cursor-pointer bg-[#ffe400] flex items-center justify-center font-bold btn-sm h-11 w-[200px] text-[#0f0f0f] hover:text-white hover:bg-[#ff6900] mr-2 border-none rounded" onClick={() => handleBtnClick('contact')}>BECOME A VOLUNTEER</div>
                     </div>
 
                 </div>
