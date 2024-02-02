@@ -1,14 +1,46 @@
 /* eslint-disable react/prop-types */
 import { FaXTwitter, FaFacebookF, FaPinterestP } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { updateCauseData } from "../../Redux/formAction";
+import { useState, useEffect } from "react";
 
 const InfoForm = ({ userAmount }) => {
+    const [updateSuccess, setUpdateSuccess] = useState(null);
+
+    const dispatch = useDispatch();
+    const { id } = useParams();
+    const numericId = parseInt(id, 10);
+
     const handleSubmit = () => {
-        console.log('call backend api');
+        if (userAmount.trim() !== "") {
+            const cleanAmount = parseInt(userAmount, 10);
+            const payload = {
+                cause_id: numericId,
+                amount: cleanAmount,
+            };
+
+            dispatch(updateCauseData(payload));
+        }
+    };
+    const updateStatus = useSelector((state) => state.donation.response);
+
+    useEffect(() => {
+    // Check if the response object is not empty
+    if (Object.keys(updateStatus).length > 0) {
+        setUpdateSuccess(updateStatus.updatedCause.success);
+      
     }
+  }, [updateStatus]);
+    
 
     return (
         <div>
-            <form action="#" id="donations" className="flex flex-col px-10 mb-40 lg:px-0 lg:pr-8">
+            <form
+                action="#"
+                id="donations"
+                className="flex flex-col px-10 mb-40 lg:px-0 lg:pr-8"
+            >
                 <p
                     id="title"
                     className="text-[#8a8a8a] text-start tracking-wider italic text-[15px] font-semibold mb-2"
@@ -78,21 +110,25 @@ const InfoForm = ({ userAmount }) => {
                         </p>
                     </div>
 
-                    
                     <button
-                        type="Submit"
+                        type="button"
                         onClick={handleSubmit}
                         className="mb-0 cursor-pointer flex items-center justify-center font-bold btn-sm h-[40px] w-[100px] hover:bg-[#ff6900] bg-[#ffe400] hover:text-white text-black border-none rounded"
                     >
                         Donation
                     </button>
 
-
                     <div className="lg:flex gap-8 items-center mt-10 ">
                         <ul className="socials flex gap-2.5">
-                            <li className="flex justify-center rounded-full md:h-10 h-9 w-9 md:w-10 bg-[#55acee] items-center hover:border-2 text-white hover:border-[#55acee] hover:bg-transparent hover:text-[#55acee]" ><FaXTwitter className="text-lg "></FaXTwitter></li>
-                            <li className="flex justify-center rounded-full md:h-10 h-9 w-9 md:w-10 bg-[#3b5998] items-center hover:border-2 text-white hover:border-[#3b5998] hover:bg-transparent hover:text-[#3b5998]"><FaFacebookF className="text-lg "></FaFacebookF></li>
-                            <li className="flex justify-center rounded-full md:h-10 h-9 w-9 md:w-10 text-white bg-[#55acee] items-center hover:border-2 hover:border-[#55acee]  hover:bg-transparent hover:text-[#55acee]"><FaPinterestP className="text-lg "></FaPinterestP></li>
+                            <li className="flex justify-center rounded-full md:h-10 h-9 w-9 md:w-10 bg-[#55acee] items-center hover:border-2 text-white hover:border-[#55acee] hover:bg-transparent hover:text-[#55acee]">
+                                <FaXTwitter className="text-lg "></FaXTwitter>
+                            </li>
+                            <li className="flex justify-center rounded-full md:h-10 h-9 w-9 md:w-10 bg-[#3b5998] items-center hover:border-2 text-white hover:border-[#3b5998] hover:bg-transparent hover:text-[#3b5998]">
+                                <FaFacebookF className="text-lg "></FaFacebookF>
+                            </li>
+                            <li className="flex justify-center rounded-full md:h-10 h-9 w-9 md:w-10 text-white bg-[#55acee] items-center hover:border-2 hover:border-[#55acee]  hover:bg-transparent hover:text-[#55acee]">
+                                <FaPinterestP className="text-lg "></FaPinterestP>
+                            </li>
                         </ul>
                     </div>
                 </div>

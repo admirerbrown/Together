@@ -1,21 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useSelector } from "react-redux";
-import { useEffect, useState } from 'react';
-import {useParams,  useNavigate} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import DonateForm from "./donateValues";
 
 const Donate = () => {
   const causeData = useSelector((state) => state.cause.data);
-  const navigate = useNavigate();
    const { id } = useParams();
    const numericId = parseInt(id, 10);
 
   const item = causeData.find((item) => item.cause_id === numericId);
-  console.log({item,causeData})
 
  
-
-
   const verifyEmail = () => {
     console.log("coming soon");
   };
@@ -124,9 +119,6 @@ const CauseCard = ({ item }) => {
     </>
   );
 };
-
-
-
 
 
 export default Donate;
