@@ -19,8 +19,7 @@ const DonateForm = ({ item }) => {
 
   if (
     document.activeElement.tagName === "INPUT" &&
-    document.activeElement.id === "isfocused" &&
-    !isChecked
+    document.activeElement.id === "isfocused" && !isChecked
   ) {
     setSelectedAmount(" ");
     setIsChecked(true);
