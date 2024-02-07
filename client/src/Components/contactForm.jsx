@@ -29,7 +29,7 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
         action="#"
         id="contact"
-        className="flex flex-col mt-10 mb-48"
+        className="flex flex-col mt-10 md:mt-0 mb-48"
       >
         <input
           type="text"
@@ -37,7 +37,7 @@ const ContactForm = () => {
           name="Name"
           placeholder="Name*"
           required
-          className=" input mt-2 mb-4 placeholder:text-sm focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent   rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[299px] xl:w-[306px] 2xl:w-[325px]"
+          className=" input mt-2 mb-4 placeholder:text-sm focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent   rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full lg:w-[299px] xl:w-[306px] 2xl:w-[325px]"
         />
 
         <input
@@ -54,7 +54,7 @@ const ContactForm = () => {
           id="subject"
           name="subject"
           placeholder="Subject"
-          className=" input mt-2 mb-4 placeholder:text-sm focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[307px] 2xl:w-[325px]"
+          className=" input mt-2 mb-4 placeholder:text-sm focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full lg:w-[300px] xl:w-[307px] 2xl:w-[325px]"
         />
 
         <textarea
@@ -62,13 +62,13 @@ const ContactForm = () => {
           name="message"
           placeholder="Message"
           required
-          className="input mt-2 mb-4 placeholder:text-sm placeholder:pt-4 focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent rounded-[0.35rem] bg-[#eee] border-none h-[200px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[307px] 2xl:w-[325px]"
+          className="input mt-2 mb-4 placeholder:text-sm placeholder:pt-4 focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent rounded-[0.35rem] bg-[#eee] border-none h-[200px] w-[290px] md:w-full lg:w-[300px] xl:w-[307px] 2xl:w-[325px]"
         ></textarea>
 
         <div className="flex flex-col w-full mt-2 pr-3 xl:pr-2 2xl:pr-0 2xl:w-[100%]">
           <button
             type="submit"
-            className="mb-0 cursor-pointer flex items-center justify-center  btn-sm h-[40px] w-[150px] hover:bg-[#ff6900] bg-[#84c54e] text-white font-bold border-none rounded"
+            className="mb-0 cursor-pointer flex items-center justify-center btn-sm h-[40px] md:h-[45px] w-[150px] md:w-[135px] hover:bg-[#ff6900] bg-[#84c54e] text-white font-bold border-none rounded"
           >
             Send Message
           </button>
