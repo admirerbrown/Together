@@ -131,7 +131,7 @@ const DonateForm = ({ item }) => {
         </div>
       </div>
 
-      <div className="2xl:w-[80%]">
+      <div className="w-full 2xl:w-[80%]">
         <InfoForm userAmount={selectedAmount}></InfoForm>
       </div>
     </div>

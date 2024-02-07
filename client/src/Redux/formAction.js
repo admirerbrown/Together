@@ -12,7 +12,6 @@ export const updateCauseData = createAsyncThunk(
             data: payload
         };
         const response = await axios.request(options);
-        // console.log(response.data);
         return response.data;
         
     }
@@ -32,7 +31,7 @@ const donationReducer = createSlice({
             return {
                 ...state,
                 isFulfilled: true,
-                response: action.payload // Update response property immutably
+                response: action.payload 
             };
         });
 

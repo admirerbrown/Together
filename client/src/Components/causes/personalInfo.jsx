@@ -113,7 +113,7 @@ const InfoForm = ({ userAmount }) => {
               id="FirstName"
               name="FirstName"
               placeholder="First Name"
-              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent   rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[250px] xl:w-[270px] 2xl:w-[325px]"
+              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent   rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[299px] xl:w-[306px] 2xl:w-[325px]"
             />
           </div>
 
@@ -129,7 +129,7 @@ const InfoForm = ({ userAmount }) => {
               id="LastName"
               name="LastName"
               placeholder="Last Name"
-              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[250px] xl:w-[270px] 2xl:w-[325px]"
+              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[300px] xl:w-[307px] 2xl:w-[325px]"
             />
           </div>
         </div>

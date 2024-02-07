@@ -25,7 +25,7 @@ const Donate = () => {
       </div>
 
       <div className="flex flex-col md:flex-row text-[#8a8a8a] xl:justify-center md:px-8 lg:px-0 xl:px-20 xl:gap-8">
-        <div className=" 2xl:flex 2xl:flex-col 2xl:items-center w-[40%] 2xl:ml-10">
+        <div className=" 2xl:flex 2xl:flex-col 2xl:items-center 2xl:w-[40%] 2xl:ml-10">
           <CauseCard item={item}></CauseCard>
 
           <div className="pl-12 xl:pl-10 2xl:ml-20">
@@ -69,7 +69,7 @@ const Donate = () => {
           </div>
         </div>
 
-        <div className="w-[50%]">
+        <div className="2xl:w-[50%]">
           <DonateForm item={item}></DonateForm>
         </div>
       </div>
