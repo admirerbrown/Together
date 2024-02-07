@@ -8,18 +8,18 @@ import { Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getCauseData } from "./Redux/homeSlice";
-
+import { ToastContainer } from "react-toastify";
 
 function App() {
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCauseData());
-  }, );
-
+  });
 
   return (
     <>
+      <ToastContainer />
+
       <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<HomePage />} />

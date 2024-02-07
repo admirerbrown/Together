@@ -39,7 +39,7 @@ const RenderData = ({ data }) => {
               {item.title}
             </p>
             <p className="px-14 text-[12.5px] md:text-[14px] xl:text-[16px] leading-[1.4rem] xl:leading-[1.6rem] md:px-0 text-left text-zinc-500">
-              {item.description}
+              {item.summary}
             </p>
 
             <div>
