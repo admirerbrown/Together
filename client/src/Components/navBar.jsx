@@ -95,7 +95,7 @@ const NavItems = () => {
         { id: 'events', label: 'events', url_path: '/events' },
         { id: 'about-us', label: 'about us', url_path: '/about-us' },
         { id: 'our-causes', label: 'our causes', url_path: '/our-causes' },
-        { id: 'contacts', label: 'Contacts', url_path: '/contacts' },
+        { id: 'contacts', label: 'Contacts', url_path: '/contact_us' },
 
     ];
 
@@ -108,7 +108,7 @@ const NavItems = () => {
             setActiveTab('about-us');
         } else if (location.pathname === '/our-causes') {
             setActiveTab('our-causes');
-        } else if (location.pathname === '/contacts') {
+        } else if (location.pathname === '/contact_us') {
             setActiveTab('contacts');
         }
     }, [location]);

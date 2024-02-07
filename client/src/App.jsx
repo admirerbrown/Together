@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getCauseData } from "./Redux/homeSlice";
 import { ToastContainer } from "react-toastify";
+import ContactPage from "./Components/contact";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +26,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/our-causes" element={<Causes />} />
         <Route path="/donate/cause_id/:id" element={<Donate />} />
+        <Route path="/contact_us" element={<ContactPage />} />
+
       </Routes>
       <Footer />
     </>
