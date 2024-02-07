@@ -19,16 +19,16 @@ const Donate = () => {
   
 
   return (
-    <div>
+    <div className="w-full">
       <div className="object-cover  mb-20 lg:mb-24">
         <img src={item.image} alt="" className="w-full md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[700px]"/>
       </div>
 
-      <div className="flex flex-col md:flex-row text-[#8a8a8a] xl:justify-center md:px-8 lg:px-0 xl:px-20 2xl:px-0 xl:gap-8">
-        <div>
+      <div className="flex flex-col md:flex-row text-[#8a8a8a] xl:justify-center md:px-8 lg:px-0 xl:px-20 xl:gap-8">
+        <div className=" 2xl:flex 2xl:flex-col 2xl:items-center w-[40%] 2xl:ml-10">
           <CauseCard item={item}></CauseCard>
 
-          <div className="pl-12 xl:pl-10">
+          <div className="pl-12 xl:pl-10 2xl:ml-20">
             <p className=" mb-2 md:pl-0 text-[22px] md:text-[22px] xl:text-[35px] font-bold text-[#333] text-start w-full md:px-0 ">
               My Donations
             </p>
@@ -69,7 +69,7 @@ const Donate = () => {
           </div>
         </div>
 
-        <div>
+        <div className="w-[50%]">
           <DonateForm item={item}></DonateForm>
         </div>
       </div>
@@ -82,7 +82,7 @@ const CauseCard = ({ item }) => {
   
   return (
     <>
-      <div className="flex flex-col md:mx-10 xl: 2xl:w-[350px] items-center xl:justify-center md:items-start mt-10">
+      <div className="flex flex-col md:mx-10 xl: 2xl:w-[350px] items-center xl:justify-center md:items-start mt-10 2xl:items-start">
         <div className="w-[285px] object-cover md:w-[260px] lg:w-[300px] xl:w-[350px] 2xl:w-[340px]">
           <img
             src={item.image}

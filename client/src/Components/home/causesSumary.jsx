@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const HomeCauses = () => {
     const causeData = useSelector((state) => state.cause.data);
-    const filteredCauses = causeData.filter(cause => [3, 5, 7].includes(cause.cause_id));
+    const filteredCauses = causeData.filter(cause => [4, 5, 7].includes(cause.cause_id));
 
 
     return (

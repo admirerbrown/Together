@@ -8,7 +8,7 @@ const FETCHDATA = 'together/FETCHDATA';
 const getCauseData = createAsyncThunk(FETCHDATA, async () => {
     const options = {
         method: 'GET',
-        url: 'http://localhost:5000/causes',
+        url: 'https://pernapp.onrender.com/causes',
     };
     const response = await axios.request(options);
 

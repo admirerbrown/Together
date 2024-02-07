@@ -98,7 +98,7 @@ const InfoForm = ({ userAmount }) => {
           Personal Info (optional)
         </p>
 
-        <hr className="h-2 w-full" />
+        <hr className="h-2 w-[100%]" />
 
         <div className=" flex flex-col mt-5 md:flex-row md:gap-3">
           <div className="flex flex-col">
@@ -113,7 +113,7 @@ const InfoForm = ({ userAmount }) => {
               id="FirstName"
               name="FirstName"
               placeholder="First Name"
-              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent   rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[250px] xl:w-[270px] 2xl:w-[320px]"
+              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent   rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[250px] xl:w-[270px] 2xl:w-[325px]"
             />
           </div>
 
@@ -129,7 +129,7 @@ const InfoForm = ({ userAmount }) => {
               id="LastName"
               name="LastName"
               placeholder="Last Name"
-              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[250px] xl:w-[270px] 2xl:w-[320px]"
+              className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent  rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-[200px] lg:w-[250px] xl:w-[270px] 2xl:w-[325px]"
             />
           </div>
         </div>
@@ -146,11 +146,11 @@ const InfoForm = ({ userAmount }) => {
             id="email_address"
             name="Email Address"
             placeholder="Email Address"
-            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full  2xl:w-full"
+            className=" input mt-2 mb-4 placeholder:text-sm placeholder:font-semibold focus:border-l-2 focus:border-r-0 focus:border-b-0 focus:border-t-2 focus:border-solid focus:outline-none focus:ring-transparent rounded-[0.35rem] bg-[#eee] border-none h-[45px] w-[290px] md:w-full"
           />
         </div>
 
-        <div className="flex flex-col w-full items-end pr-3 xl:pr-2 2xl:pr-0">
+        <div className="flex flex-col w-full items-end pr-3 xl:pr-2 2xl:pr-0 2xl:w-[100%]">
           <div className="flex flex-col xl:flex-row items-center gap-3">
             <p className="text-[18px] italic font-Open-Sans font-semibold text-[#8a8a8a]">
               Donation Total:
@@ -162,13 +162,12 @@ const InfoForm = ({ userAmount }) => {
 
           <button
             type="submit"
-            // onClick={handleSubmit}
             className="mb-0 cursor-pointer flex items-center justify-center font-bold btn-sm h-[40px] w-[100px] hover:bg-[#ff6900] bg-[#ffe400] hover:text-white text-black border-none rounded"
           >
             Donation
           </button>
 
-          <div className="lg:flex gap-8 items-center mt-10 ">
+          <div className="lg:flex gap-8 items-center mt-10  ">
             <ul className="socials flex gap-2.5">
               <li className="flex justify-center rounded-full md:h-10 h-9 w-9 md:w-10 bg-[#55acee] items-center hover:border-2 text-white hover:border-[#55acee] hover:bg-transparent hover:text-[#55acee]">
                 <FaXTwitter className="text-lg "></FaXTwitter>

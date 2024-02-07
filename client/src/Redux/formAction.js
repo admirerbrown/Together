@@ -8,7 +8,7 @@ export const updateCauseData = createAsyncThunk(
     async (payload) => {
         const options = {
             method: 'PUT',
-            url: "http://localhost:5000/update_cause",
+            url: "https://pernapp.onrender.com/update_cause",
             data: payload
         };
         const response = await axios.request(options);
