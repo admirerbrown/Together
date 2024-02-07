@@ -14,7 +14,7 @@ const ContactPage = () => {
                 />
             </div>
 
-            <div className="px-10 md:px-14 font-Open-Sans text-zinc-400 md:flex md:w-full md:justify-center md:gap-8">
+            <div className="px-10 md:px-14 lg:px-0 font-Open-Sans text-zinc-400 md:flex md:w-full md:justify-center md:gap-8">
                 <div className="flex flex-col gap-4 md:gap-6 md:w-[40%]">
                     <div >
                         <h2 className="font-bold text-lg mb-4  text-[#424242]">Contact Info</h2>
