@@ -10,7 +10,7 @@ const NavBar = () => {
     const navigate = useNavigate();
 
     const handleBtnClick = ( btnId ) => {
-        btnId === 'donate' ? navigate('/our-causes') : navigate('/contacts');
+        btnId === 'donate' ? navigate('/our-causes') : navigate('/contact_us');
     }
 
 
