@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { getCauseData } from "./Redux/homeSlice";
 import { ToastContainer } from "react-toastify";
 import ContactPage from "./Components/contact";
+import EventPage from "./Components/events";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,8 @@ function App() {
         <Route path="/our-causes" element={<Causes />} />
         <Route path="/donate/cause_id/:id" element={<Donate />} />
         <Route path="/contact_us" element={<ContactPage />} />
+        <Route path="/events" element={<EventPage />} />
+
 
       </Routes>
       <Footer />
