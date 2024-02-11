@@ -31,19 +31,21 @@ const RenderTeam = () => {
   ];
   const bgImage =
     "https://charity-is-hope.themerex.net/wp-content/uploads/2016/09/bg-5.jpg";
+
+    
   return (
     <div
       className="bg-cover bg-center flex flex-col items-center px-11 font-Open-Sans py-16"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <h1 className="font-extrabold text-2xl mb-2">OUR TEAM</h1>
-      <h2 className="text-[15.5px] text-center mb-9">
+      <h1 className="font-extrabold text-2xl md:text-3xl mb-2">OUR TEAM</h1>
+      <h2 className="text-[15.5px] md:text-[20px] text-center mb-9">
         These wonderful people make it all possible
       </h2>
-      <div>
+      <div className="md:flex md:gap-8">
         {teamData.map((member, index) => (
           <div key={index} className="flex flex-col items-center mb-8">
-            <div className="w-[280px] h-[260px] object-cover md:w-[320px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px]">
+            <div className="w-[280px] h-[260px] object-cover md:w-[150px] md:h-[150px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px]">
               <img
                 src={member.image}
                 className="w-full h-full rounded"
