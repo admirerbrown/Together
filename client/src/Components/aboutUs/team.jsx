@@ -45,7 +45,7 @@ const RenderTeam = () => {
       <div className="md:flex md:gap-8">
         {teamData.map((member, index) => (
           <div key={index} className="flex flex-col items-center mb-8">
-            <div className="w-[280px] h-[260px] object-cover md:w-[150px] md:h-[150px] lg:w-[400px] xl:w-[300px] 2xl:w-[340px]">
+            <div className="w-[280px] h-[260px] object-cover md:w-[150px] md:h-[150px] lg:w-[200px] xl:w-[300px] 2xl:w-[340px]">
               <img
                 src={member.image}
                 className="w-full h-full rounded"

@@ -51,19 +51,19 @@ const ImpactStats = () => {
   return (
     <div
       id="showStat"
-      className=" font-Open-Sans flex flex-col gap-10 mt-16 pb-20"
+      className=" font-Open-Sans flex flex-col gap-10 lg:gap-14 mt-16 pb-20 lg:pb-28 lg:mt-20"
     >
       <div className="flex flex-col items-center gap-3">
-        <h1 className="font-extrabold text-2xl md:text-3xl">LIVES WE SAVED</h1>
-        <h2 className="text-[15.5px]">Our impacts is all over Africa</h2>
+        <h1 className="font-extrabold text-2xl md:text-3xl lg:text-4xl">LIVES WE SAVED</h1>
+        <h2 className="text-[15.5px] lg:text-xl">Our impacts is all over Africa</h2>
       </div>
 
-      <div className="md:flex md:w-[50%] md:px-5">
+      <div className="md:flex md:w-[50%] lg:w-full md:px-5">
         {data.map(
           (item) =>
             renderComponent && (
-              <div key={item.id} className="flex flex-col gap-3 px-11 md:px-12">
-                <h2 className="font-bold text-5xl text-[#84c54e]">
+              <div key={item.id} className="flex flex-col gap-3 mb-5 md:mb-0 px-11 md:px-12">
+                <h2 className="font-bold text-5xl lg:text-6xl text-[#84c54e]">
                   <CountUpAnimation duration={2000}>
                     {item.figure}
                   </CountUpAnimation>
