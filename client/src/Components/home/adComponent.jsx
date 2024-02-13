@@ -9,7 +9,7 @@ const AdComponent = ({ image, title, text, btnText }) => {
         <div className="object-cover w-full h-full overflow-hidden">
           <img
             src={image}
-            className="w-full h-full transform scale-x-150 scale-y-125"
+            className="w-full h-full "
             alt="featured add"
           />
         </div>
