@@ -33,7 +33,7 @@ For more information on the importance of a professional README for your reposit
   <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" /> -->
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <!-- <h3><b>Microverse README Template</b></h3> -->
 
 </div>
 
@@ -196,7 +196,7 @@ Example:
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/samuel-ntow-kyere/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
