@@ -75,7 +75,7 @@ const InfoForm = ({ userAmount }) => {
   useEffect(() => {
     if (updateSuccess === true) {
       const redirectTimer = setTimeout(() => {
-        window.location.href = "/our-causes";
+        window.location.href = "/";
       }, 2000);
 
       // Clean up the timer when the component unmounts or when updateSuccess changes
